@@ -2,9 +2,6 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-/* ========================================
-   БАЗОВЫЕ СТИЛИ И СБРОС
-   ======================================== */
 
 * {
     box-sizing: border-box;
@@ -64,10 +61,6 @@ hr { border: none; border-top: 1px solid #E0E0E0; margin: 40px 0; }
     font-size: 12px;
     color: #667085;
 }
-
-/* ========================================
-   HEADER - ДЕСКТОП
-   ======================================== */
 
 .header {
     position: fixed;
@@ -177,9 +170,6 @@ hr { border: none; border-top: 1px solid #E0E0E0; margin: 40px 0; }
     color: black;
 }
 
-/* ========================================
-   HERO
-   ======================================== */
 
 .hero {
     width: 1124px;
@@ -251,9 +241,6 @@ input {
     height: auto;
 }
 
-/* ========================================
-   DEV INFO
-   ======================================== */
 
 .dev-info {
     display: flex;
@@ -297,9 +284,6 @@ input {
     text-decoration: underline;
 }
 
-/* ========================================
-   PROJECTS
-   ======================================== */
 
 .projects {
     width: 1124px;
@@ -325,9 +309,6 @@ input {
     height: 40px;
 }
 
-/* ========================================
-   CLIENTS & CASE
-   ======================================== */
 
 .clients {
     width: 1124px;
@@ -401,9 +382,6 @@ input {
     object-fit: contain;
 }
 
-/* ========================================
-   CTA
-   ======================================== */
 
 .cta {
     background-color: rgba(45, 102, 238, 1);
@@ -432,9 +410,6 @@ input {
     flex-shrink: 0;
 }
 
-/* ========================================
-   STAGES
-   ======================================== */
 
 .stages {
     width: 1124px;
@@ -472,9 +447,6 @@ input {
     margin-bottom: 8px;
 }
 
-/* ========================================
-   ABOUT
-   ======================================== */
 
 .about {
     width: 1124px;
@@ -518,9 +490,6 @@ input {
     cursor: pointer;
 }
 
-/* ========================================
-   BOOK
-   ======================================== */
 
 .book {
     background: rgba(45, 102, 238, 1);
@@ -573,10 +542,6 @@ input {
     margin-right: 50px;
 }
 
-/* ========================================
-   FAQ
-   ======================================== */
-
 .faq {
     width: 1124px;
     max-width: 100%;
@@ -601,9 +566,6 @@ input {
     border-bottom: 1px solid #eee;
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
 
 .footer {
     flex-shrink: 0;
@@ -673,17 +635,12 @@ input {
 }
 
 
-/* ========================================
-   АДАПТИВНОСТЬ - ПЛАНШЕТ (768px – 1023px)
-   ======================================== */
-
 @media (min-width: 768px) and (max-width: 1023px) {
 
     body {
         padding-top: 80px;
     }
 
-    /* === HEADER === */
     .header {
         width: calc(100% - 32px);
         max-width: 100%;
@@ -758,7 +715,6 @@ input {
         display: none;
     }
 
-    /* === HERO === */
     .hero {
         width: 100%;
         max-width: 100%;
@@ -772,7 +728,6 @@ input {
         max-width: 100%;
     }
 
-    /* === DEV INFO === */
     .dev-info {
         width: 100%;
         max-width: 100%;
@@ -789,7 +744,6 @@ input {
         padding-top: 30px;
     }
 
-    /* === PROJECTS === */
     .projects {
         width: 100%;
         max-width: 100%;
@@ -802,7 +756,6 @@ input {
         gap: 20px;
     }
 
-    /* === CLIENTS & CASE === */
     .clients {
         width: 100%;
         max-width: 100%;
@@ -826,7 +779,6 @@ input {
         max-height: 300px;
     }
 
-    /* === CTA === */
     .cta-inner {
         width: 100%;
         max-width: 100%;
@@ -840,7 +792,6 @@ input {
         max-width: 500px;
     }
 
-    /* === STAGES === */
     .stages {
         width: 100%;
         max-width: 100%;
@@ -852,7 +803,6 @@ input {
         grid-template-columns: 1fr;
     }
 
-    /* === ABOUT === */
     .about {
         width: 100%;
         max-width: 100%;
@@ -869,7 +819,6 @@ input {
         max-width: 400px;
     }
 
-    /* === BOOK === */
     .book-inner {
         width: 100%;
         max-width: 100%;
@@ -887,7 +836,6 @@ input {
         display: none;
     }
 
-    /* === FAQ === */
     .faq {
         width: 100%;
         max-width: 100%;
@@ -899,7 +847,6 @@ input {
         flex: 1 1 100%;
     }
 
-    /* === FOOTER === */
     .footer-inner {
         width: 100%;
         max-width: 100%;
@@ -917,17 +864,12 @@ input {
 }
 
 
-/* ========================================
-   АДАПТИВНОСТЬ - МОБИЛКА (≤767px)
-   ======================================== */
-
 @media (max-width: 767px) {
 
     body {
         padding-top: 80px;
     }
 
-    /* === HEADER === */
     .header {
         width: calc(100% - 32px);
         max-width: 720px;
@@ -1006,7 +948,6 @@ input {
         display: none;
     }
 
-    /* === HERO === */
     .hero {
         width: 100%;
         max-width: 100%;
@@ -1030,7 +971,6 @@ input {
         width: 100%;
     }
 
-    /* === DEV INFO === */
     .dev-info {
         width: 100%;
         max-width: 100%;
@@ -1052,7 +992,6 @@ input {
         margin-bottom: 24px;
     }
 
-    /* === PROJECTS === */
     .projects {
         width: 100%;
         max-width: 100%;
@@ -1073,7 +1012,6 @@ input {
         border-radius: 8px;
     }
 
-    /* === CLIENTS & CASE === */
     .clients {
         width: 100%;
         max-width: 100%;
@@ -1109,7 +1047,6 @@ input {
         max-height: 250px;
     }
 
-    /* === CTA === */
     .cta {
         padding: 40px 0;
         width: 100%;
@@ -1130,7 +1067,6 @@ input {
         width: 100%;
     }
 
-    /* === STAGES === */
     .stages {
         width: 100%;
         max-width: 100%;
@@ -1155,7 +1091,6 @@ input {
         height: 50px;
     }
 
-    /* === ABOUT === */
     .about {
         width: 100%;
         max-width: 100%;
@@ -1178,7 +1113,6 @@ input {
         width: 100%;
     }
 
-    /* === BOOK === */
     .book {
         padding: 40px 0;
         margin-top: 40px;
@@ -1210,7 +1144,6 @@ input {
         display: none;
     }
 
-    /* === FAQ === */
     .faq {
         width: 100%;
         max-width: 100%;
@@ -1229,7 +1162,6 @@ input {
         padding: 16px;
     }
 
-    /* === FOOTER === */
     .footer {
         padding: 40px 0 20px;
         margin-top: 40px;
