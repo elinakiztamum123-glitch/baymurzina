@@ -8,7 +8,6 @@ const renderPostItem = item => `
         <span class="post-item__title">
             ${item.title}
         </span>
-
         <span class="post-item__body">
             ${item.body}
         </span>
@@ -35,7 +34,6 @@ const renderPhotoItem = item => `
         <span class="photo-item__title">
             ${item.title}
         </span>
-
         <img 
             src=${item.url}
             class="photo-item__image"
