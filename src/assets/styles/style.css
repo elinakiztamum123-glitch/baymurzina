@@ -6,3 +6,25 @@
 @import "./form.css";
 @import "./text-field.css";
 @import "./button.css";
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+#todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #eee;
+}
+#todo-list li span {
+    flex: 1;
+}
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
