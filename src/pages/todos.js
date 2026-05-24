@@ -37,7 +37,7 @@ const todosService = {
             throw new Error(data.message || 'Ошибка, задачи не создались');
         }
 
-        return data;
+        return data.data;
     },
 
     async updateStatus(todoId, completed) {
@@ -57,7 +57,7 @@ const todosService = {
             throw new Error(data.message || 'Ошибка, статус не обновился');
         }
 
-        return data;
+        return data.data;
     },
 
     async delete(todoId) {
@@ -76,7 +76,7 @@ const todosService = {
             throw new Error(data.message || 'Ошибка, не удалились задачи');
         }
 
-        return data;
+        return data.data;
     }
 };
 
