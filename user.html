@@ -18,10 +18,7 @@
 </header>
 
 <main class="main">
-    <div
-            class="user-info"
-            id="user-info"
-    >
+    <div class="user-info" id="user-info">
         <div class="user-info__item">
             <span>name</span>
             <span data-user-name></span>
@@ -37,14 +34,19 @@
             <span data-user-age></span>
         </div>
     </div>
+
+    <div class="todos-section">
+        <h2>Мои задачи</h2>
+        <div class="todo-form">
+            <input type="text" id="todo-input" placeholder="Новая задача">
+            <button id="todo-submit">Добавить</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
 </main>
 
 <div class="loader-wrapper" data-loading>
-    <img
-            src="./src/assets/icons/loader.svg"
-            alt=""
-            class="loader"
-    >
+    <img src="./src/assets/icons/loader.svg" alt="" class="loader">
 </div>
 
 <script src="src/pages/user.js" type="module"></script>
