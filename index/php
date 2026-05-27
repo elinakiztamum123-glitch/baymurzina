@@ -1,0 +1,114 @@
+<?php
+// 1
+echo "<div class='result'><h2>Задание 1</h2>";
+$i = 0;
+do {
+    if ($i == 0) echo "$i – это ноль.<br>";
+    elseif ($i % 2 == 0) echo "$i – чётное число.<br>";
+    else echo "$i – нечётное число.<br>";
+    $i++;
+} while ($i <= 10);
+echo "</div>";
+
+// 2
+echo "<div class='result'><h2>Задание 2</h2>";
+$regions = [
+    "Московская область" => ["Москва", "Зеленоград", "Клин"],
+    "Ленинградская область" => ["Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт"],
+    "Рязанская область" => ["Рязань", "Касимов", "Скопин", "Сасово"]
+];
+foreach ($regions as $region => $cities) {
+    echo "$region:<br>" . implode(", ", $cities) . ".<br><br>";
+}
+echo "</div>";
+
+// 3
+echo "<div class='result'><h2>Задание 3</h2>";
+$letters = [
+    'а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d','е'=>'e','ё'=>'yo',
+    'ж'=>'zh','з'=>'z','и'=>'i','й'=>'y','к'=>'k','л'=>'l','м'=>'m',
+    'н'=>'n','о'=>'o','п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u',
+    'ф'=>'f','х'=>'h','ц'=>'ts','ч'=>'ch','ш'=>'sh','щ'=>'sch',
+    'ъ'=>'','ы'=>'y','ь'=>'','э'=>'e','ю'=>'yu','я'=>'ya'
+];
+function translit($str, $map) {
+    $out = '';
+    for ($i = 0; $i < mb_strlen($str); $i++) {
+        $c = mb_substr($str, $i, 1);
+        $l = mb_strtolower($c);
+        $out .= isset($map[$l]) ? $map[$l] : $c;
+    }
+    return $out;
+}
+echo "Привет мир → " . translit("Привет мир", $letters) . "<br>";
+echo "</div>";
+
+// 4
+echo "<div class='result'><h2>Задание 4</h2>";
+$menu = ["Главная"=>"/", "О нас"=>"/about", "Услуги"=>"/services", "Контакты"=>"/contacts"];
+echo "<ul>";
+foreach ($menu as $name => $link) echo "<li><a href='$link'>$name</a></li>";
+echo "</ul>";
+$submenu = [
+    "Главная"=>"/",
+    "Услуги"=>[
+        "Груминг"=>"/grooming", 
+        "Мяу"=>"/design"
+    ],
+    "Контакты"=>"/contacts"
+];
+function showMenu($items) {
+    echo "<ul>";
+    foreach ($items as $k => $v) {
+        if (is_array($v)) {
+            echo "<li>$k"; showMenu($v); echo "</li>";
+        } else {
+            echo "<li><a href='$v'>$k</a></li>";
+        }
+    }
+    echo "</ul>";
+}
+showMenu($submenu);
+echo "</div>";
+
+// 5
+echo "<div class='result'><h2>Задание 5</h2>";
+class MenuEngine {
+    function render($items) {
+        echo "<ul>";
+        foreach ($items as $k => $v) {
+            if (is_array($v)) {
+                echo "<li>$k"; $this->render($v); echo "</li>";
+            } else {
+                echo "<li><a href='$v'>$k</a></li>";
+            }
+        }
+        echo "</ul>";
+    }
+}
+$engine = new MenuEngine();
+$engine->render($submenu);
+echo "</div>";
+
+// 6
+echo "<div class='result'><h2>Задание 6</h2>";
+foreach ($regions as $region => $cities) {
+    $filtered = array_filter($cities, function($city) {
+        return mb_substr($city, 0, 1) == "К";
+    });
+    if (!empty($filtered)) echo "$region:<br>" . implode(", ", $filtered) . ".<br><br>";
+}
+echo "</div>";
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Задания</title>
+    <link rel="stylesheet" href="src/assets/styles/style.css">
+</head>
+<body>
+<script src="index.js"></script>
+</body>
+</html>
