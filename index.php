@@ -48,7 +48,7 @@ $menuTree = buildTree($allItems);
 <head>
     <meta charset="UTF-8">
     <title>List Item</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <div class="list-items" id="list-items">
