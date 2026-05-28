@@ -25,9 +25,9 @@ function renderMenu($items, $isRoot = false) {
         $html .= '<div class="list-item' . $openClass . '" data-parent>';
         $html .= '<div class="list-item__inner">';
         if ($hasChildren) {
-            $html .= '<img class="list-item__arrow" src="img/chevron-down.jpg" alt="chevron-down" data-open>';
+            $html .= '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>';
         }
-        $html .= '<img class="list-item__folder" src="img/folder.jpg" alt="folder">';
+        $html .= '<img class="list-item__folder" src="img/folder.png" alt="folder">';
         $html .= '<span>' . htmlspecialchars($item['name']) . '</span>';
         $html .= '</div>';
         if ($hasChildren) {
